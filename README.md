@@ -3,10 +3,10 @@
 
 - [Introduzione](#introduzione)
 - [Preparazione](#preparazione)
-  - [Input al programma](#input-al-programma)
+- [Input/Output](#inputoutput)
 - [Relazione](#relazione)
 - [Consegna](#consegna)
-  - [Come creare l'archivio](#come-creare-larchivio)
+- [Come creare l'archivio](#come-creare-larchivio)
 - [Valutazione](#valutazione)
 - [Eventuale riconsegna](#eventuale-riconsegna)
 - [Uso di sistemi di Intelligenza Artificiale](#uso-di-sistemi-di-intelligenza-artificiale)
@@ -24,7 +24,8 @@ I progetti proposti riguardano:
 - [Simulazione dell'interazione tra due specie](volterra.md)
 - [Simulazione del comportamento di stormi](boids.md)
 - [Dinamica in un biliardo triangolare](biliardo.md)
-
+- [Rete neurale di Hopfield](hopfield.md)
+  
 E' possibile presentare il progetto su un altro tema a propria scelta, purché di
 complessità paragonabile e concordato preventivamente con i docenti.
 
@@ -38,16 +39,15 @@ due persone. Il progetto può però essere preparato anche singolarmente.
 Il programma deve essere scritto in C++ standard, seguendo le indicazioni e le
 raccomandazioni fornite a lezione nel corso dell'anno. E' ammesso l'uso di
 librerie esterne (ad esempio per la grafica), ma queste devono essere
-disponibili sulla piattaforma di riferimento (Ubuntu 24.04, con il compilatore
-gcc v. 13).
+disponibili sulla piattaforma di riferimento (Ubuntu 24.04).
 
 Ogni programma deve essere costituito da **almeno due** *translation unit*.
 Indicativamente la logica del programma va suddivisa tra uno o più header file
-(`.hpp`) e tra uno o più file sorgente (`.cpp`); la funzionalità va poi
-richiamata da un ulteriore file contenente il `main`.
+(con estensione `.hpp`) e tra uno o più file sorgente (con estensione `.cpp`);
+la funzionalità va poi richiamata da un ulteriore file contenente il `main`.
 
-Il codice deve essere formattato adeguatamente (con `clang-format` o tool
-equivalente). Il file di configurazione del tool di formattazione
+Il codice deve essere formattato adeguatamente (con `clang-format` o strumento
+equivalente). Il file di configurazione dello strumento di formattazione
 (`.clang-format` nel caso di `clang-format`) deve essere consegnato insieme al
 progetto.
 
@@ -99,9 +99,25 @@ indicarne l'indirizzo nella relazione; se la repository è privata ed è tenuta 
 account `giacomini`, `battibass` e `fferrari1990`. Naturalmente questo **non**
 sostituisce la consegna secondo le modalità indicate sotto.
 
-### Input al programma
+## Input/Output
 
-...
+Si consiglia di limitare al minimo indispensabile il codice dedicato all'input
+di parametri e all'output di risultati, sia nel caso di applicazioni da
+terminale sia di applicazioni grafiche, e di concentrarsi invece sulla logica
+del programma.
+
+Nel caso di parametri letti da uno *stream* di input (ad es. lettura di
+parametri da terminale via `std::cin` o da file) o passati sulla linea di
+comando, viene richiesto solo di verificare che il tipo del valore letto/passato
+sia corretto e che il valore letto/passato sia valido (ad es., nel caso di un
+parametro numerico, che sia all'interno di un certo intervallo); se così non
+fosse, il comportamento richiesto è di notificare l'utente con un adeguato
+messaggio d'errore e uscire dal programma. Non bisogna ri-chiedere all'utente un
+altro valore.
+
+Anche nel caso di lettura di parametri tramite *widget* grafici è richiesta la
+validazione rigorosa dei valori letti. In caso di errore però non è opportuno
+chiudere l'applicazione.
 
 ## Relazione
 
@@ -110,17 +126,20 @@ codice e alla valutazione del lavoro nel suo complesso. La relazione deve essere
 sintetica (indicativamente di lunghezza non superiore a qualche pagina) e deve
 contenere:
 
+- titolo del progetto
 - autore o autori del lavoro
+- data, corrispondente alle ultime modifiche al codice (giorno più, giorno meno)
 - eventuali modifiche intercorse dalla consegna precedente
 - descrizione sintetica delle principali scelte progettuali e implementative
 - istruzioni dettagliate su come eseguire il programma o i programmi che fanno
   parte del progetto
-- descrizione del formato di input e di output, con degli esempi
+- descrizione precisa dei parametri di input e del formato di output, con degli
+  esempi immediatamente usabili da noi per la valutazione
 - interpretazione dei risultati ottenuti
 - strategia di test per verificare che quanto ottenuto sia ragionevolmente
   esente da errori
-- dichiarazione di eventuale uso di sistemi di Intelligenza Artificiale (vedi
-  sotto)
+- dichiarazione di eventuale uso di sistemi di Intelligenza Artificiale
+  generativa (vedi sotto)
 - ogni altra informazione utile agli obiettivi sopra citati
 
 La relazione deve essere in formato `pdf` o *markdown* (il formato con cui è
@@ -159,7 +178,7 @@ comando `ls -A`.
 Prima di creare l'archivio, verificate attentamente il contenuto e fate
 eventualmente pulizia di tutto quanto non va consegnato.
 
-### Come creare l'archivio
+## Come creare l'archivio
 
 Supponendo che tutto il codice e la relazione si trovino in una cartella
 `progetto`, per creare un archivio in formato `zip`:
@@ -186,7 +205,8 @@ Prima di produrre l'archivio sincerarsi che la directory contenga la relazione.
 Una volta creato l'archivio, consigliamo di sincerarsi che, una volta
 scompattato, contenga tutto quanto necessario per la compilazione e
 l'esecuzione. Per scompattare, spostarsi in un'altra cartella e usare i comandi
-`unzip progetto.zip` o `tar zxf progetto.tgz`.
+`unzip progetto.zip` o `tar zxf progetto.tgz`, quindi riprovare il build, i test
+e l'esecuzione del programma o dei programmi.
 
 ## Valutazione
 
@@ -241,7 +261,7 @@ In entrambi i casi, si richiede di **proporre variazioni significative**
 rispetto alla consegna precedente.
 
 Riconsegne individuali sono ammesse anche se il progetto è stato sviluppato
-originariamente in gruppo, ma i diversi componenti del gruppo si presentano
+originariamente in gruppo ma i diversi componenti del gruppo si presentano
 all'orale ad appelli diversi.
 
 In tal caso, al fine di migliorare la valutazione, è necessario che le
@@ -249,7 +269,8 @@ variazioni apportate al progetto *vadano oltre a quelle proposte dai docenti*
 durante i colloqui affrontati da coloro che hanno già sostenuto l'esame.
 
 In qualsiasi caso, **le variazioni** intercorse tra le diverse versioni del
-progetto **vanno elencate** esplicitamente **all'inizio della nuova relazione**, altrimenti verrà confermata la valutazione precedente.
+progetto **vanno elencate** esplicitamente **all'inizio della nuova relazione**,
+altrimenti verrà confermata la valutazione precedente.
 
 Si possono presentare progetti che siano già stati presentati in anni accademici
 precedenti da parte di persone dello stesso gruppo solo se includono variazioni
@@ -257,9 +278,11 @@ significative e originali.
 
 ## Uso di sistemi di Intelligenza Artificiale
 
-Ai fini dell'apprendimento è sconsigliato un uso eccessivo di sistemi di
-Intelligenza Artificiale, soprattutto per la generazione del codice. L'eventuale
-uso deve comunque essere conforme alla [policy di
+Ai fini dell'apprendimento, sconsigliamo un uso eccessivo di sistemi di
+Intelligenza Artificiale, soprattutto per la generazione del codice. In
+particolare, raccomandiamo di disabilitare strumenti automatici di generazione
+di codice direttamente all'interno dell'editor (ad es. Copilot dentro VSCode).
+L'eventuale uso deve comunque essere conforme alla [policy di
 Ateneo](https://www.unibo.it/it/ateneo/chi-siamo/intelligenza-artificiale/Casi-uso-GenAI-comunita-studentesca-valutazione)
 e dichiarato nella relazione.
 
