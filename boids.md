@@ -47,13 +47,13 @@ variazione di velocità del boid a cui vengono applicate.
 
 Per ogni boid $b_i$:
 
-$$
+```math
 \vec{v}_{b_i}=\vec{v}_{b_i}+\vec{v}_1+\vec{v}_2+\vec{v}_3
-$$
+```
 
-$$
+```math
 \vec{x}_{b_i}=\vec{x}_{b_i}+\vec{v}_{b_i} \Delta t
-$$
+```
 
 dove $\vec{v}_1$, $\vec{v}_2$ e $\vec{v}_3$ sono le velocità ottenute
 dall'applicazione delle tre regole.
@@ -62,9 +62,9 @@ dall'applicazione delle tre regole.
 
 La regola ha lo scopo di evitare che i boids collidano tra di loro.
 
-$$
+```math
 \vec{v}_1 = -s\sum_{j\ne i}(\vec{x}_{b_j}-\vec{x}_{b_i})\quad \text{se}\quad \left|\vec{x}_{b_i}-\vec{x}_{b_j}\right|\lt d_s
-$$
+```
 
 Usando la distanza come fattore per determinare la nuova velocità permette di
 avere una accelerazione graduale del boid che si allontana. Un opportuno fattore
@@ -76,9 +76,9 @@ stabilisce il range di influenza della regola.
 Lo scopo della regola è fare in modo che i boids tendano a procedere nella
 stessa direzione dello stormo.
 
-$$
+```math
 \vec{v}_2 = a(\frac{1}{n-1}\sum_{j\ne i}\vec{v}_{b_j} - \vec{v}_{b_i})
-$$
+```
 
 Viene sottratta alla media delle velocità dei boids (escluso il boid su cui è
 applicata la regola) la velocità attuale del boid $b_i$. Il tutto moltiplicato
@@ -90,17 +90,17 @@ sterza.
 La regola induce il boid a volare verso il centro di massa dei boid vicini. Il
 centro di massa è dato da:
 
-$$
+```math
 \vec{x}_{c} = \frac{1}{n-1}\sum_{j\ne i}\vec{x}_{b_j}
-$$
+```
 
 La velocità $\vec{v}_3$ si ottiene sottraendo la posizione attuale del boid alla
 posizione del centro di massa, moltiplicando poi il risultato per un fattore di
 coesione $c$ opportuno:
 
-$$
+```math
 \vec{v}_3 = c(\vec{x}_{c}-\vec{x}_{b_i})
-$$
+```
 
 ## Implementazione del modello
 
