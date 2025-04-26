@@ -64,7 +64,15 @@ Per il *build* del codice deve essere utilizzato [*CMake*](https://cmake.org/).
 Questa repository contiene un file [`CMakeLists.txt`](CMakeLists.txt) di
 esempio; per adattarlo al proprio progetto seguire i suggerimenti inclusi nel
 file stesso sotto forma di commenti. Le opzioni di compilazione, in particolare
-per i *warning* e i *sanitizer*, non possono essere rilassate.
+per *warning*, asserzioni nella standard library e *sanitizer*, non possono
+essere rilassate.
+
+Nel caso si voglia approfondire l'uso di CMake, consigliamo di partire dalla
+*Getting Started Guide* di [Professional
+CMake](https://crascit.com/professional-cmake/), disponibile gratuitamente, o
+dal [CMake
+Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
+disponibile sul sito di CMake.
 
 I comandi che useremo durante la valutazione per configurare e buildare il
 progetto saranno indicativamente i seguenti:
