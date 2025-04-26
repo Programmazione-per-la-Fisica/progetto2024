@@ -36,9 +36,9 @@ Le regole di volo vengono applicate tenendo conto dei boids "vicini". La
 vicinanza tra boids può essere determinata in base alla loro posizione. Dato un
 boid $b_i$, i suoi vicini sono tutti i boids $b_j$ per cui:
 
-$$
+```math
 \left|\vec{x}_{b_i}-\vec{x}_{b_j}\right|\lt {d}
-$$
+```
 
 ## Le regole di volo
 
