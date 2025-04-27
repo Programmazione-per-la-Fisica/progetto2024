@@ -74,6 +74,10 @@ dal [CMake
 Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 disponibile sul sito di CMake.
 
+Se si usano librerie esterne (ad es. SFML), queste devono essere facilmente
+installabili con il comando `apt install` oppure essere integrate nel build
+con CMake del progetto.
+
 I comandi che useremo durante la valutazione per configurare e buildare il
 progetto saranno indicativamente i seguenti:
 
@@ -141,6 +145,7 @@ contenere:
 - descrizione sintetica del tema del progetto, solo nel caso questo non sia uno
   dei temi da noi proposti
 - descrizione sintetica delle principali scelte progettuali e implementative
+- eventuali librerie esterne da installare con `apt install`
 - istruzioni dettagliate su come eseguire il programma o i programmi che fanno
   parte del progetto
 - descrizione precisa dei parametri di input e del formato di output, con degli
