@@ -54,6 +54,9 @@ progetto.
 Nomi di file, funzioni, tipi, variabili, ecc. devono essere descrittivi e
 seguire convenzioni ortografiche e di lingua uniformi.
 
+Tutte le entità del programma (tipi, funzioni, ecc.) devono essere dichiarate
+dentro un unico namespace.
+
 I nomi di file e directory non devono contenere spazi ed essere in carattere
 minuscolo.
 
