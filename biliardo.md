@@ -4,6 +4,12 @@
 - [Descrizione del sistema](#descrizione-del-sistema)
 - [Obiettivo](#obiettivo)
 
+---
+
+- **Complessità del progetto**: media
+- **Numero massimo di membri del gruppo**: quattro
+
+
 ## Descrizione del sistema
 
 La geometria del sistema considerato è mostrata in figura:

@@ -4,16 +4,24 @@ Una **rete neurale di Hopfield** è un tipo di rete neurale ricorrente introdott
 
 ## Outline
 
-1. [Descrizione generale](#descrizione-generale)
-2. [Acquisizione dei pattern](#1-acquisizione-dei-pattern)
-3. [Fase di apprendimento](#2-fase-di-apprendimento)
-4. [Fase di richiamo](#3-fase-di-richiamo)
-5. [Esempio semplificato](#esempio-semplificato)
-6. [Limitazioni del modello](#limitazioni-del-modello)
-7. [Possibili estensioni del modello](#possibili-estensioni-del-modello)
-8. [Link utili](#link-utili)
+- [Rete neurale di Hopfield](#rete-neurale-di-hopfield)
+  - [Outline](#outline)
+  - [Descrizione generale](#descrizione-generale)
+  - [1. Acquisizione dei pattern](#1-acquisizione-dei-pattern)
+  - [2. Fase di apprendimento](#2-fase-di-apprendimento)
+  - [3. Fase di richiamo](#3-fase-di-richiamo)
+  - [Esempio semplificato](#esempio-semplificato)
+    - [Passo 1: Inizializzazione](#passo-1-inizializzazione)
+    - [Passo 2: Matrice dei pesi con la regola di Hebb](#passo-2-matrice-dei-pesi-con-la-regola-di-hebb)
+    - [Passo 3: Richiamo di un pattern rumoroso](#passo-3-richiamo-di-un-pattern-rumoroso)
+  - [Limitazioni del modello](#limitazioni-del-modello)
+  - [Possibili estensioni del modello](#possibili-estensioni-del-modello)
+  - [Link utili](#link-utili)
 
 ---
+
+- **Complessità del progetto**: media
+- **Numero massimo di membri del gruppo**: quattro
 
 ## Descrizione generale
 

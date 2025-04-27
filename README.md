@@ -26,7 +26,7 @@ I progetti proposti riguardano:
 - [Dinamica in un biliardo triangolare](biliardo.md)
 - [Rete neurale di Hopfield](hopfield.md)
   
-E' possibile presentare il progetto su un altro tema a propria scelta, purché di
+È possibile presentare il progetto su un altro tema a propria scelta, purché di
 complessità paragonabile e concordato preventivamente con i docenti.
 
 ## Preparazione
@@ -37,7 +37,7 @@ dell'interazione tra due specie" può essere svolto in un gruppo di al massimo
 due persone. Il progetto può però essere preparato anche singolarmente.
 
 Il programma deve essere scritto in C++ standard, seguendo le indicazioni e le
-raccomandazioni fornite a lezione nel corso dell'anno. E' ammesso l'uso di
+raccomandazioni fornite a lezione nel corso dell'anno. È ammesso l'uso di
 librerie esterne (ad esempio per la grafica), ma queste devono essere
 disponibili sulla piattaforma di riferimento (Ubuntu 24.04).
 
@@ -55,13 +55,13 @@ Nomi di file, funzioni, tipi, variabili, ecc. devono essere descrittivi e
 seguire convenzioni ortografiche e di lingua uniformi.
 
 Tutte le entità del programma (tipi, funzioni, ecc.) devono essere dichiarate
-dentro un unico namespace.
+dentro un unico `namespace`.
 
 I nomi di file e directory non devono contenere spazi ed essere in carattere
 minuscolo.
 
-E' richiesta la scrittura di *unit test*, usando *Doctest* o altro strumento
-analogo.
+È richiesta la scrittura di *unit test*, usando
+[*Doctest*](https://github.com/doctest/doctest) o altro strumento analogo.
 
 Per il *build* del codice deve essere utilizzato [*CMake*](https://cmake.org/).
 Questa repository contiene un file [`CMakeLists.txt`](CMakeLists.txt) di
