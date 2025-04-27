@@ -40,14 +40,14 @@ A partire da un pattern noto:
 La fase di Input/Output ha l'obiettivo di preparare i pattern binari da utilizzare per l'addestramento e il richiamo della rete neurale.
 
 - **Caricamento dei pattern**  
-Ogni immagine di input (ad esempio file PNG a colori) viene caricata accedendo direttamente ai pixel, ad esempio tramite una libreria grafica come SFML. Per ogni pixel, il valore binario viene determinato mediando le componenti $R$, $G$, $B$ (tutte comprese tra 0 e 255) del colore. Se il valore medio supera una soglia prefissata (e.g. 127), il pixel viene considerato acceso ($+1$), altrimenti spento ($-1$).
+Ogni immagine di input (ad esempio file PNG a colori) viene caricata accedendo direttamente ai pixel, ad esempio tramite una libreria grafica come SFML. 
 - **Uniformazione delle dimensioni**  
-Affinché la rete possa trattare correttamente i diversi pattern, **tutti** devono avere la stessa dimensione $N$. Se le immagini iniziali hanno dimensioni diverse, è necessario ridimensionarle.  
+Affinché la rete possa trattare correttamente i diversi pattern, **tutti** devono avere la stessa dimensione $N$ (intesa come numero di pixel). Se le immagini iniziali hanno dimensioni diverse, è necessario ridimensionarle.  
 Alcuni approcci possibili sono:
   - **Metodo semplice**: rimozione regolare di righe e colonne di pixel, ad esempio eliminando ogni $k$-esima riga/colonna per adattare la dimensione.
   - **Metodo più accurato**: ridimensionamento tramite **interpolazione bilineare**, che calcola i valori dei pixel nuovi combinando in modo pesato i pixel adiacenti, garantendo una migliore qualità visiva del pattern ridimensionato.
-- **Costruzione del pattern binario**  
-L'immagine binarizzata viene poi "srotolata" in un vettore monodimensionale di lunghezza $N$, ottenuto leggendo i pixel riga per riga.  
+- **Costruzione del pattern binario**
+Per ogni pixel, il valore binario viene determinato mediando le componenti $R$, $G$, $B$ (tutte comprese tra 0 e 255) del colore. Se il valore medio supera una soglia prefissata (e.g. 127), il pixel viene considerato acceso ($+1$), altrimenti spento ($-1$). L'immagine binarizzata viene poi "srotolata" in un vettore monodimensionale di lunghezza $N$, ottenuto leggendo i pixel riga per riga.  
 Il pattern associato a ciascuna immagine viene indicato come $x_i^\mu$, dove:
   - $i$ varia da $1$ a $N$ ed è l'indice dei neuroni (pixel),
   - $\mu$ varia da $1$ al numero totale di pattern memorizzati.
@@ -232,6 +232,3 @@ La rete ha corretto il bit sbagliato, recuperando il pattern memorizzato più vi
 
 - **[Hopfield Networks is All You Need](https://ml-jku.github.io/hopfield-layers/)**  
   Una panoramica moderna sulle reti di Hopfield, con estensioni deep learning e connessioni con architetture moderne.
-
-- **[Lecture Notes on Hopfield Networks — Stanford](https://web.stanford.edu/class/cs379c/resources/lectures/index.html)**  
-  Appunti didattici di Stanford che spiegano in modo semplice e didattico il funzionamento delle reti di Hopfield.
