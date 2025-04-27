@@ -138,6 +138,8 @@ contenere:
 - autore o autori del lavoro
 - data, corrispondente alle ultime modifiche al codice (giorno più, giorno meno)
 - eventuali modifiche intercorse dalla consegna precedente
+- descrizione sintetica del tema del progetto, solo nel caso questo non sia uno
+  dei temi da noi proposti
 - descrizione sintetica delle principali scelte progettuali e implementative
 - istruzioni dettagliate su come eseguire il programma o i programmi che fanno
   parte del progetto
