@@ -13,11 +13,6 @@
 - [Suggerimenti sull'implementazione](#suggerimenti-sullimplementazione)
 - [Riferimenti utili](#riferimenti-utili)
 
----
-
-- **Complessità del progetto**: media
-- **Numero massimo di membri del gruppo**: quattro
-
 ## Descrizione del problema
 
 Il progetto consiste nell'implementazione di una simulazione del comportamento
