@@ -9,11 +9,6 @@
 - [Variazioni sul tema](#variazioni-sul-tema)
 - [Riferimenti utili](#riferimenti-utili)
 
----
-
-- **Complessità del progetto**: facile
-- **Numero massimo di membri del gruppo**: due
-
 ## Descrizione del problema
 
 Il compito consiste nella progettazione e nell'implementazione di una
@@ -36,7 +31,7 @@ maniera indipendente, da Lotka nel 1925 e da Volterra nel 1926.
 ## Le equazioni di Lotka-Volterra
 
 Dette rispettivamente $x(t)$ e $y(t)$ le densità di **prede** e di **predatori**
-ad un dato istante $t$ (calcolare rispetto all'area in cui le due specie
+ad un dato istante $t$ (calcolate rispetto all'area in cui le due specie
 coesistono), il sistema dinamico può essere descritto dalla seguente coppia di
 equazioni differenziali:
 
@@ -48,7 +43,7 @@ $$
 $$
 
 Dove i parametri $A$ e $C$ indicano quanto rapidamente le due specie possano
-riprodursi, una volta trovato cibo sufficiente , mentre i parametri $B$ e $D$
+riprodursi, una volta trovato cibo sufficiente, mentre i parametri $B$ e $D$
 descrivono il tasso di mortalità delle due specie. La mortalità delle **prede**
 è dovuta al cadere vittime dei **predatori**, mentre la mortalità dei
 **predatori** è dettata dalla loro morte per stenti in caso la quantità di prede
@@ -65,7 +60,7 @@ maggiori di 0**.
 ### Note sulla dinamica del sistema
 
 Dato uno stato iniziale con $x(0)$ e $y(0)$ entrambi reali e maggiori di 0,
-le orbite sel sistema sono ristrette a coppie di valori $(x(t), y(t))$ positivi,
+le orbite del sistema sono ristrette a coppie di valori $(x(t), y(t))$ positivi,
 come mostrato in figura.
 
 Inoltre, la soluzione del sistema di equazioni differenziali presenta due punti
@@ -164,9 +159,10 @@ In aggiunta, è possibile considerare una o più delle seguenti variazioni
   in funzione del tempo;
 - si può sviluppare una finestra che disegni in un piano cartesiano l'_orbita_
   del numero di **prede** $x_i$ e **predatori** $y_i$;
-- in analogia al gioco _game of life_, si può sviluppare una simulazione del
-  modello in una griglia discreta, dove prede e predatori possono interagire coi
-  loro "vicini";
+- si può sviluppare una simulazione del modello in una griglia discreta, dove
+  prede e predatori occupano delle celle e possono interagire coi loro "vicini";
+- la simulazione del modello può anche avvenire in uno spazio continuo, in cui
+  prede e predatori sono liberi di muoversi;
 - ogni altra variazione che vi paia interessante.
 
 ## Riferimenti utili
