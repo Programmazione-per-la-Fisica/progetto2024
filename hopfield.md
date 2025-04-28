@@ -18,11 +18,6 @@ Una **rete neurale di Hopfield** è un tipo di rete neurale ricorrente introdott
   - [Possibili estensioni del modello](#possibili-estensioni-del-modello)
   - [Link utili](#link-utili)
 
----
-
-- **Complessità del progetto**: media
-- **Numero massimo di membri del gruppo**: quattro
-
 ## Descrizione generale
 
 L'obiettivo generale del progetto è sviluppare una rete neurale di Hopfield capace di memorizzare, richiamare e correggere pattern binari.  
