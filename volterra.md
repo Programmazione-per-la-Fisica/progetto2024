@@ -18,7 +18,7 @@
 
 Il compito consiste nella progettazione e nell'implementazione di una
 simulazione che descriva, in uno scenario opportunamente semplificato,
-l'interazione tra due specie che coesistono in un _ecosistema_.
+l'interazione tra due specie che coesistono in un **ecosistema**.
 
 La prima delle due specie considerate è quella delle **prede**, le quali (in
 analogia con gli animali erbivori che abitano un'area fertile)
@@ -30,8 +30,8 @@ Nel modello considerato, il successo nella caccia avviene con una probabilità
 proporzionale al prodotto tra il numero di **prede** e il numero di
 **predatori**.
 
-Il sistema dinamico utilizzato per la simulazione è quello proposto, in maniera
-indipendente, da Lotka nel 1925 e da Volterra nel 1926.
+Il sistema di equazioni utilizzato per la simulazione è quello proposto, in
+maniera indipendente, da Lotka nel 1925 e da Volterra nel 1926.
 
 ## Le equazioni di Lotka-Volterra
 
@@ -54,8 +54,8 @@ descrivono il tasso di mortalità delle due specie. La mortalità delle **prede*
 **predatori** è dettata dalla loro morte per stenti in caso la quantità di prede
 catturate sia insufficiente al sostentamento.
 
-Tutti e quattro i parametri sono da intendersi come numeri reali strettamente
-maggiori di 0.
+Tutti e quattro i parametri sono da intendersi come **numeri reali strettamente
+maggiori di 0**.
 
 > [!NOTE]
 > Come descritto sopra, il tasso di nutrimento e riproduzione dei predatori
@@ -114,23 +114,24 @@ y_i^{rel} &= y_{i-1}^{rel} + D (x_{i-1}^{rel} - 1) y_{i-1}^{rel} \Delta t\\
 
 Viene richiesto di sviluppare una simulazione che, introdotto uno stato
 iniziale $(x_0, y_0)$ ed una serie di parametri $A, B, C, D$ **validi**,
-utilizzi la versione discretizzata delle equazioni di Lotka-Volterra per
-calcolare, ad ogni passo dell'evoluzione, i valori $(x_i, y_i, H_i)$.
+utilizzi la versione discretizzata delle equazioni di Lotka-Volterra 
+presentata in $${\color{green}^{\textbf{[1]}}}$$ per calcolare, ad ogni passo
+dell'evoluzione, i valori $(x_i, y_i, H_i)$.
 
 La durata totale della simulazione, espressa in multipli interi dell'unità
 di tempo $\Delta t$, deve essere una variabile che l'utente può introdurre a
 _runtime_.
 
 Oltre alle caratteristiche minime che ogni progetto deve soddisfare (menzionate
-nella pagina [principale della repository](README.md)), in questo caso sono
+nella [pagina principale della repository](README.md)), in questo caso sono
 posti alcuni vincoli ulteriori.
 
 **In primis**, la descrizione del sistema deve essere implementata tramite una
 classe `Simulation` la quale deve, quantomeno:
 - contenere un metodo `evolve()` che permetta di fare progredire la
   simulazione di una singola unità $\Delta t$;
-- mantenere al suo interno i valori assoluti $(x_i, y_i, H_i)$ per tutti gli
-  stati di evoluzione del sistema e renderli accessibili all'utente per
+- mantenere al suo interno i **valori assoluti** $(x_i, y_i, H_i)$ per **tutti
+  gli stati di evoluzione del sistema** e renderli accessibili all'utente per
   eventuali stampe su schermo o analisi.
 
 **In secondo luogo**, al fine di migliorare la stabilità del calcolo numerico,
@@ -147,8 +148,8 @@ si richiede di:
 > valori $(x_i, y_i) = (1200.0, 1000.0)$, deve essere rappresentata nella classe
 > `Simulation` come $(x_i^{rel}, y_i^{rel}) = (1.2, 1.25)$.
 
-Ogni metodo che espone gli stati del sistema per le analisi successive deve
-restituire $x_i$ e $y_i$ espressi come valori assoluti.
+Ogni metodo che **espone gli stati del sistema** per le analisi successive deve
+restituire $x_i$ e $y_i$ espressi come **valori assoluti**.
 
 ## Variazioni sul tema
 
