@@ -9,6 +9,7 @@
 - [Come creare l'archivio](#come-creare-larchivio)
 - [Valutazione](#valutazione)
 - [Eventuale riconsegna](#eventuale-riconsegna)
+- [Svolgimento del colloquio orale](#svolgimento-del-colloquio-orale)
 - [Uso di sistemi di Intelligenza Artificiale](#uso-di-sistemi-di-intelligenza-artificiale)
 
 ## Introduzione
@@ -294,6 +295,16 @@ altrimenti verrà confermata la valutazione precedente.
 Si possono presentare progetti che siano già stati presentati in anni accademici
 precedenti da parte di persone dello stesso gruppo solo se includono variazioni
 significative e originali.
+
+## Svolgimento del colloquio orale
+
+Chi è ammesso alla prova orale è pregato di attenersi alle seguenti linee guida:
+
+- Si presenti con il proprio portatile (o con un portatile in prestito).
+- Installi sul portatile una versione del progetto d'esame coerente con quella
+  consegnata verifichi che compili prima del colloquio.
+- Disabiliti *copilot* o qualsiasi funzionalità analoga, qualora sia presente
+  nella sua IDE di sviluppo.
 
 ## Uso di sistemi di Intelligenza Artificiale
 
