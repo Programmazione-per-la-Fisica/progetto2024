@@ -41,7 +41,7 @@ Il programma deve essere scritto in C++ standard, seguendo le indicazioni e le
 raccomandazioni fornite a lezione nel corso dell'anno. È ammesso l'uso di
 librerie esterne (ad esempio per la grafica), ma queste devono essere
 disponibili sulla piattaforma di riferimento (Ubuntu 24.04).
-Specificatamente all l'uso della libreria SFML su macOS, si seguano
+Specificatamente all'uso della libreria SFML su macOS, si seguano
 [queste istruzioni](SFML26_macOS.md).
 
 Ogni programma deve essere costituito da **almeno due** *translation unit*.
