@@ -1,7 +1,7 @@
 <!-- markdownlint-disable-file MD014 MD028 -->
 
 <!-- omit in toc -->
-# Installazione di SFML 2.6 su mac OS
+# Installazione di SFML 2.6 su macOS
 
 - [Introduzione](#introduzione)
 - [Installazione di SFML 2.6](#installazione-di-sfml-26)
@@ -9,7 +9,7 @@
 
 > [!CAUTION]
 > Le istruzioni riportate di seguito sono valide **unicamente** per gli
-> utilizzatori di mac OS, i quali:
+> utilizzatori di macOS, i quali:
 >
 > - abbiano una versione del sistema operativo compatibile con _Homebrew_
 >   (Ventura, Sonoma, Sequoia);
@@ -23,15 +23,15 @@
 Come descritto altrove durante il corso, quest'anno utilizziamo come
 **piattaforma di riferimento Ubuntu 24.04**. Pertanto, per lo sviluppo
 collaborativo di progetti che fanno uso di librerie esterne (es. SFML), vogliamo
-che i diversi ambienti di sviluppo (es. quelli basati su mac OS) siano "il più
+che i diversi ambienti di sviluppo (es. quelli basati su macOS) siano "il più
 simile possibile" a quello in Ubuntu 24.04.
 
-Questo significa che **gli utenti mac OS che collaborano con utenti
+Questo significa che **gli utenti macOS che collaborano con utenti
 Windows/Linux** devono **installare SFML 2.6**, se ne fanno uso.
 
 > [!IMPORTANT]
 > Singoli individui o gruppi che sviluppano il progetto d'esame utilizzando
-> unicamente mac OS possono avvalersi di SFML 3.0, ma devono **specificarlo
+> unicamente macOS possono avvalersi di SFML 3.0, ma devono **specificarlo
 > nella relazione**.
 
 La ricetta di installazione, risulta leggermente più complicata del solito, a
@@ -65,7 +65,7 @@ Installed
 ```
 
 A questo punto, è necessario aggiungere alcune variabili d'ambiente nel file
-`.zshrc` che configura il terminale di mac OS alla sua apertura.
+`.zshrc` che configura il terminale di macOS alla sua apertura.
 
 Per farlo eseguite il comando:
 
@@ -73,12 +73,10 @@ Per farlo eseguite il comando:
 $ code ${HOME}/.zshrc
 ```
 
-e aggiungete le seguenti righe in fondo al file appena aperto:
+e aggiungete la seguente riga in fondo al file appena aperto:
 
 ```zsh
 export SFML_DIR="/opt/homebrew/opt/sfml@2/"
-export CPPFLAGS="-I/opt/homebrew/opt/sfml@2/include"
-export LDFLAGS="-L/opt/homebrew/opt/sfml@2/lib"
 ```
 
 salvate il file, chiudete il terminale e riapritelo per configurarlo
@@ -93,7 +91,7 @@ versione del compilatore `clang-1700.0.13.3` .
 Potete verificare la versione installata sul vostro portatile usando il comando:
 
 ```zsh
-$   g++ --version       
+$ g++ --version       
 Apple clang version 17.0.0 (clang-1700.0.13.3)
 Target: arm64-apple-darwin24.5.0
 Thread model: posix
@@ -109,7 +107,7 @@ dei **Command Line Tools**, che trovate
 > il download.
 
 > [!IMPORTANT]
-> Considerando i limiti della rete wirlesess durante i laboratori, vi
+> Considerando i limiti della rete wireless durante i laboratori, vi
 > **consigliamo vivamente** di **scaricare il pacchetto da casa**.
 >
 > Potremo poi installarlo e configurarlo assieme in laboratorio, qualora

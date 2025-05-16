@@ -41,6 +41,8 @@ Il programma deve essere scritto in C++ standard, seguendo le indicazioni e le
 raccomandazioni fornite a lezione nel corso dell'anno. È ammesso l'uso di
 librerie esterne (ad esempio per la grafica), ma queste devono essere
 disponibili sulla piattaforma di riferimento (Ubuntu 24.04).
+Specificatamente all l'uso della libreria SFML su macOS, si seguano
+[queste istruzioni](SFML26_macOS.md).
 
 Ogni programma deve essere costituito da **almeno due** *translation unit*.
 Indicativamente la logica del programma va suddivisa tra uno o più header file
@@ -302,7 +304,7 @@ Chi è ammesso alla prova orale è pregato di attenersi alle seguenti linee guid
 
 - Si presenti con il proprio portatile (o con un portatile in prestito).
 - Installi sul portatile una versione del progetto d'esame coerente con quella
-  consegnata verifichi che compili prima del colloquio.
+  consegnata e verifichi che compili prima del colloquio.
 - Disabiliti *copilot* o qualsiasi funzionalità analoga, qualora sia presente
   nella sua IDE di sviluppo.
 
