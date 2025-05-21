@@ -177,16 +177,16 @@ x_{\text{iniziale}} = (1, -1, 1, -1)
 
 (dove il primo bit è errato rispetto a $x^{(1)}$).
 
-Ora aggiorniamo ogni neurone calcolando il suo **campo locale** e applicando la **funzione segno**:
+Ora aggiorniamo un neurone alla volta e applicando la **funzione segno** (ad ogni step il pattern iniziale viene modificato):
 
 ```math
-x_1' = \text{sgn}((-1/2) \cdot 1 + (-1/2) \cdot (-1) + 1/2 \cdot (-1)) = \text{sgn}(-1/2)
+x_1' = \text{sgn}((-1/2) \cdot (-1) + (-1/2) \cdot 1 + 1/2 \cdot (-1)) = \text{sgn}(-1/2)
 ```
 
 Risultato: $x_1' = -1$.
 
 ```math
-x_2' = \text{sgn}((-1/2) \cdot (-1) + 1/2 \cdot (-1) + (-1/2) \cdot (-1)) = \text{sgn}(1/2)
+x_2' = \text{sgn}((-1/2) \cdot (-1) + 1/2 \cdot 1 + (-1/2) \cdot (-1)) = \text{sgn}(3/2)
 ```
 
 Risultato: $x_2' = 1$.
@@ -198,7 +198,7 @@ x_3' = \text{sgn}((-1/2) \cdot (-1) + 1/2 \cdot 1 + (-1/2) \cdot (-1)) = \text{s
 Risultato: $x_3' = 1$.
 
 ```math
-x_4' = \text{sgn}(1/2 \cdot (-1) + (-1/2) \cdot 1 + (-1/2) \cdot (-1)) = \text{sgn}(-1/2)
+x_4' = \text{sgn}(1/2 \cdot (-1) + (-1/2) \cdot 1 + (-1/2) \cdot 1) = \text{sgn}(-3/2)
 ```
 
 Risultato: $x_4' = -1$.
